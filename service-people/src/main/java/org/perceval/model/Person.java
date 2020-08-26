@@ -1,7 +1,6 @@
 package org.perceval.model;
 
 import java.io.Serializable;
-import java.util.Optional;
 
 public class Person implements Serializable {
 
