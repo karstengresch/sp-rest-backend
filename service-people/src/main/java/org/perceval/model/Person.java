@@ -1,59 +1,24 @@
 package org.perceval.model;
 
-import java.io.Serializable;
+import java.util.List;
+import javax.persistence.Entity;
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
-public class Person implements Serializable {
+@Entity
+public class Person extends PanacheEntity {
 
-  private static final long serialVersionUID = -7114814267719778282L;
+  public String personId;
+  public String surname;
+  public String firstName;
+  public ProjectRole projectRole;
+  public Department department;
 
-  private String personId;
-  private String surname;
-  private String firstName;
-  private ProjectRole projectRole;
-  private Department department;
-
-  public Person() {
-
+  public static List<Person> findBySurame(String surname) {
+    return find("surname", surname).list();
   }
 
-  public Department getDepartment() {
-    return department;
+  public static List<Person> findById(String personId) {
+    return find("personId", personId).list();
   }
 
-  public void setDepartment(Department department) {
-    this.department = department;
-  }
-
-  public ProjectRole getProjectRole() {
-    return projectRole;
-  }
-
-  public void setProjectRole(ProjectRole projectRole) {
-    this.projectRole = projectRole;
-  }
-
-  public String getFirstName() {
-    return firstName;
-  }
-
-  public void setFirstName(String firstName) {
-    this.firstName = firstName;
-  }
-
-  public String getSurname() {
-    return surname;
-  }
-
-  public void setSurname(String surname) {
-    this.surname = surname;
-  }
-
-  public String getPersonId() {
-    return personId;
-  }
-
-  public void setPersonId(String personId) {
-    this.personId = personId;
-  }
-  
 }
