@@ -10,12 +10,12 @@ import static org.hamcrest.CoreMatchers.is;
 public class PeopleResourceTest {
 
     @Test
-    public void testHelloEndpoint() {
+    public void testPeopleEndpoint() {
         given()
-          .when().get("/hello")
+          .when().get("/people")
           .then()
              .statusCode(200)
-             .body(is("hello"));
+             .body(is("people"));
     }
 
 }

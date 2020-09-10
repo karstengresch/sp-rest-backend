@@ -8,13 +8,13 @@ import javax.ws.rs.core.MediaType;
 
 import org.perceval.model.Person;
 
-@Path("/hello")
+@Path("/people")
 public class PeopleResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return "hello";
+        return "people";
     }
 
     @PUT

@@ -9,6 +9,7 @@ repositories {
 }
 
 dependencies {
+    implementation 'io.quarkus:quarkus-jdbc-h2'
     implementation 'io.quarkus:quarkus-jdbc-postgresql'
     implementation 'org.apache.camel.quarkus:camel-quarkus-qute'
     implementation 'io.quarkus:quarkus-resteasy-qute'
@@ -22,6 +23,7 @@ dependencies {
 
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.rest-assured:rest-assured'
+    compile group: 'org.apache.maven.plugins', name: 'maven-surefire-plugin', version: '3.0.0-M5'
 }
 
 group 'org.perceval.backend'
