@@ -2,4 +2,4 @@
 
 service: people
 
-For storing and retrieving all stakeholders involved in the evaluation process.
+For storing and retrieving all stakeholders involved in the evaluation process.git 
